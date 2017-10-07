@@ -1,0 +1,69 @@
+{
+
+  "Groups": [
+    {
+      "UniqueId": "AppBars",
+      "Title": "App bars and commands Dom",
+      "Subtitle": "AppBar, CommandBar, AppBarButton, AppBarToggleButton, AppBarSeparator",
+      "ImagePath": "ms-appx:///Assets/Square150x150Logo.scale-200.png",
+      "Description": "Use app bars to present navigation, commands, and tools to users."
+
+    },
+    {
+      "UniqueId": "Buttons",
+      "Title": "Buttons Dom",
+      "Subtitle": "Button, HyperlinkButton, RepeatButton, ToggleButton",
+      "ImagePath": "ms-appx:///Assets/FlyerLevels/platinum-circle.png",
+      "Description": "Use button controls to let users perform an action, like submitting a form or showing a menu."
+    },
+    {
+      "UniqueId": "Collections",
+      "Title": "Collection/data controls",
+      "Subtitle": "FlipView, GridView, ListView, Pivot, SemanticZoom, Hub",
+      "ImagePath": "ms-appx:///Assets/GridView.png",
+      "Description": "Use collection controls to display, navigate, and interact with collections of data and media."
+    },
+    {
+      "UniqueId": "Flyouts",
+      "Title": "Flyout controls",
+      "Subtitle": "ContentDialog, Flyout, MenuFlyout, ToolTip",
+      "ImagePath": "ms-appx:///Assets/ToolTip.png",
+      "Description": "Use flyout surfaces to show or collect contextual information."
+    },
+    {
+      "UniqueId": "Layout",
+      "Title": "Layout controls",
+      "Subtitle": "Border, Canvas, Grid, RelativePanel, ScrollViewer, SplitView, StackPanel, VariableSizedWrapGrid, ViewBox",
+      "ImagePath": "ms-appx:///Assets/Canvas.png",
+      "Description": "Use layout controls to arrange the controls and content in your app."
+    },
+    {
+      "UniqueId": "Progress",
+      "Title": "Progress controls",
+      "Subtitle": "ProgressBar, ProgressRing",
+      "ImagePath": "ms-appx:///Assets/ProgressBar.png",
+      "Description": "Use progress controls to graphically represent ongoing activity or the progress of a task."
+    },
+    {
+      "UniqueId": "Selection",
+      "Title": "Selection and picker controls",
+      "Subtitle": "CheckBox, ComboBox, DatePicker, ListBox, RadioButton, Slider, TimePicker, ToggleSwitch",
+      "ImagePath": "ms-appx:///Assets/CheckBox.png",
+      "Description": "Use selection controls to let a user set a value or choose between various options."
+    },
+    {
+      "UniqueId": "Text",
+      "Title": "Text controls",
+      "Subtitle": "AutoSuggestBox, PasswordBox, RichEditBox, RichTextBlock, TextBlock, TextBox",
+      "ImagePath": "ms-appx:///Assets/TextBox.png",
+      "Description": "Use text controls to display or edit plain text and other rich content."
+    },
+    {
+      "UniqueId": "MediaInk",
+      "Title": "Media and ink controls",
+      "Subtitle": "Image, InkCanvas, MediaElement",
+      "ImagePath": "ms-appx:///Assets/Image.png",
+      "Description": "Use media controls to display images and videos. Use ink to capture strokes and display them."
+    }
+  ]
+}

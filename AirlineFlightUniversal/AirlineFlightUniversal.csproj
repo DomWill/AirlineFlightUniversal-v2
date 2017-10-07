@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataModel\ControlInfoDataSource.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -108,6 +109,8 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="AirlineFlightUniversal_TemporaryKey.pfx" />
+    <Content Include="Assets\FlyerLevels\platinum-circle.png" />
+    <Content Include="DataModel\ControlInfoData.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Images\VA_737-800_Business.jpg" />

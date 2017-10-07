@@ -133,7 +133,7 @@ namespace AirlineFlightUniversal.Model
         #region Helpers
         private static string GeneratePosition()
         {
-            List<string> positions = new List<string>() { "Program Manager", "Developer", "Product Manager", "Evangelist" };
+            List<string> positions = new List<string>() { "Platinum", "Gold", "Silver", "Silver", "Silver", "No Status", "No Status" };
             return positions[random.Next(0, positions.Count)];
         }
         private static string GetBiography()

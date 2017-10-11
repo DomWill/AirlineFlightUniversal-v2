@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using AirlineFlightUniversal.Model;
 using AirlineFlightUniversal.DataModel;
+using System.ServiceModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -29,7 +30,38 @@ namespace AirlineFlightUniversal
         public MainPage()
         {
             this.InitializeComponent();
-                    
+
+            try
+            {
+                BasicHttpBinding binding = new BasicHttpBinding();
+
+                binding.MaxBufferSize = int.MaxValue;
+                binding.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
+                binding.MaxReceivedMessageSize = int.MaxValue;
+                binding.AllowCookies = true;
+
+                binding.Security.Mode = BasicHttpSecurityMode.TransportCredentialOnly;
+                binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
+
+                EndpointAddress endpoint = new EndpointAddress("http://flightxml.flightaware.com/soap/FlightXML3/op");
+
+                FlightXML3SoapClient client = new FlightXML3SoapClient(binding, endpoint);
+
+                client.ClientCredentials.UserName.UserName = "domwill";
+                client.ClientCredentials.UserName.Password = "94cbda5fc45127c0bb257d948ce2101c9641df78";
+
+                FlightInfoStatusResponse response = client.FlightInfoStatusAsync("VA912", false, "", 1, 0).Result;
+
+                foreach (var flight in response.FlightInfoStatusResult.flights)
+                {
+                    FlightDetails.Text = $"{flight.ident} ({flight.aircrafttype})\t{flight.origin.airport_name} ({flight.origin.code}) Est Departure {flight.estimated_departure_time.time}, Est Arrival {flight.estimated_arrival_time.time}";
+                }
+            }
+            catch (Exception ex)
+            {
+                FlightDetails.Text = $"Error {ex.Message}";
+            }
+
         }
 
         public IEnumerable<ControlInfoDataGroup> Groups

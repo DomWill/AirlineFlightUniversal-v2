@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using AirlineFlightUniversal.Model;
 using AirlineFlightUniversal.DataModel;
 using System.ServiceModel;
+using AirlineFlightUniversal.FlightXML3;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -31,36 +32,43 @@ namespace AirlineFlightUniversal
         {
             this.InitializeComponent();
 
-            //try
-            //{
-            //    BasicHttpBinding binding = new BasicHttpBinding();
+            try
+            {
+                BasicHttpBinding binding = new BasicHttpBinding();
 
-            //    binding.MaxBufferSize = int.MaxValue;
-            //    binding.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
-            //    binding.MaxReceivedMessageSize = int.MaxValue;
-            //    binding.AllowCookies = true;
+                binding.MaxBufferSize = int.MaxValue;
+                binding.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
+                binding.MaxReceivedMessageSize = int.MaxValue;
+                binding.AllowCookies = true;
 
-            //    binding.Security.Mode = BasicHttpSecurityMode.TransportCredentialOnly;
-            //    binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
+                binding.Security.Mode = BasicHttpSecurityMode.TransportCredentialOnly;
+                binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
 
-            //    EndpointAddress endpoint = new EndpointAddress("http://flightxml.flightaware.com/soap/FlightXML3/op");
+                EndpointAddress endpoint = new EndpointAddress("http://flightxml.flightaware.com/soap/FlightXML3/op");
 
-            //    FlightXML3SoapClient client = new FlightXML3SoapClient(binding, endpoint);
+                FlightXML3SoapClient client = new FlightXML3SoapClient(binding, endpoint);
 
-            //    client.ClientCredentials.UserName.UserName = "domwill";
-            //    client.ClientCredentials.UserName.Password = "94cbda5fc45127c0bb257d948ce2101c9641df78";
+                client.ClientCredentials.UserName.UserName = "domwill";
+                client.ClientCredentials.UserName.Password = "94cbda5fc45127c0bb257d948ce2101c9641df78";
 
-            //    FlightInfoStatusResponse response = client.FlightInfoStatusAsync("VA912", false, "", 1, 0).Result;
+                FlightInfoStatusResponse response = client.FlightInfoStatusAsync("VA912", false, "", 1, 0).Result;
 
-            //    foreach (var flight in response.FlightInfoStatusResult.flights)
-            //    {
-            //        FlightDetails.Text = $"{flight.ident} ({flight.aircrafttype})\t{flight.origin.airport_name} ({flight.origin.code}) Est Departure {flight.estimated_departure_time.time}, Est Arrival {flight.estimated_arrival_time.time}";
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    FlightDetails.Text = $"Error {ex.Message}";
-            //}
+                foreach (var flight in response.FlightInfoStatusResult.flights)
+                {
+                    tblFlightCode.Text = flight.ident;
+                    tbDepartureTime.Text = flight.estimated_departure_time.time;
+                    tbOrigin.Text = flight.origin.airport_name;
+                    tbDestination.Text = flight.destination.airport_name;
+                    tbArrivalTime.Text = flight.estimated_arrival_time.time;
+                    tbAircraft.Text = flight.aircrafttype;
+
+                    //tblFlightCode.Text = $"{flight.ident} ({flight.aircrafttype})\t{flight.origin.airport_name}  Est Arrival {flight.estimated_arrival_time.time}";
+                }
+            }
+            catch (Exception ex)
+            {
+                tblFlightCode.Text = $"Error {ex.Message}";
+            }
 
         }
 

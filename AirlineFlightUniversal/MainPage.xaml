@@ -61,11 +61,11 @@
                 <TextBlock Text="Passengers" FontFamily="Segoe UI" Foreground="White" FontSize="32" />
             </StackPanel>
             <StackPanel Grid.Row="2" Grid.Column="2" Margin="6,0,0,0" >
-                <TextBlock Text="MELB" FontFamily="Segoe UI" Foreground="White" FontSize="32" />
-                <TextBlock Text="10:00" FontFamily="Segoe UI" Foreground="White" FontSize="32" />
-                <TextBlock Text="BNE" FontFamily="Segoe UI" Foreground="White" FontSize="32" />
-                <TextBlock Text="13:30" FontFamily="Segoe UI" Foreground="White" FontSize="32" />
-                <TextBlock Text="737-800" FontFamily="Segoe UI" Foreground="White" FontSize="32" />
+                <TextBlock Text="MELB" FontFamily="Segoe UI" Foreground="White" FontSize="32" x:Name="tbOrigin" />
+                <TextBlock Text="10:00" FontFamily="Segoe UI" Foreground="White" FontSize="32" x:Name="tbDepartureTime" />
+                <TextBlock Text="BNE" FontFamily="Segoe UI" Foreground="White" FontSize="32" x:Name="tbDestination" />
+                <TextBlock Text="13:30" FontFamily="Segoe UI" Foreground="White" FontSize="32" x:Name="tbArrivalTime" />
+                <TextBlock Text="737-800" FontFamily="Segoe UI" Foreground="White" FontSize="32" x:Name="tbAircraft" />
                 <TextBlock Text="9" FontFamily="Segoe UI" Foreground="White" FontSize="32" />
                 <TextBlock Text="145" FontFamily="Segoe UI" Foreground="White" FontSize="32" />
             </StackPanel>

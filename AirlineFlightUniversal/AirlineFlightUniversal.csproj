@@ -95,6 +95,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\FlightXML3\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="DataModel\ControlInfoDataSource.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -110,7 +115,84 @@
     </AppxManifest>
     <None Include="AirlineFlightUniversal_TemporaryKey.pfx" />
     <Content Include="Assets\FlyerLevels\platinum-circle.png" />
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.AircraftTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.AirlineFlightSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.AirlineInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.AirportBoardsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.AirportDelaysResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.AirportInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.BlockIdentCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.CountAirportOperationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.CountAllEnrouteAirlineOperationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.DecodeFlightRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.DecodeRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.FindFlightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.FlightCancellationStatisticsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.FlightInfoStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.GetFlightTrackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.LatLongsToDistanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.LatLongsToHeadingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.NearbyAirportsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.RoutesBetweenAirportsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.TailOwnerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.WeatherConditionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.WeatherForecastResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.ZipcodeInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FlightXML3\configuration91.svcinfo" />
+    <None Include="Connected Services\FlightXML3\configuration.svcinfo" />
+    <None Include="Connected Services\FlightXML3\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="DataModel\ControlInfoData.json" />
+    <None Include="Connected Services\FlightXML3\wsdl.wsdl" />
+    <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Images\VA_737-800_Business.jpg" />
@@ -137,6 +219,12 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>5.4.0</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\FlightXML3\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

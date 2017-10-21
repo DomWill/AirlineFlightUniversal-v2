@@ -3,43 +3,43 @@
   "Groups": [
     {
       "UniqueId": "AppBars",
-      "Title": "App bars and commands Dom",
+      "Title": "1A John Smith",
       "Subtitle": "AppBar, CommandBar, AppBarButton, AppBarToggleButton, AppBarSeparator",
-      "ImagePath": "ms-appx:///Assets/Square150x150Logo.scale-200.png",
+      "ImagePath": "ms-appx:///Assets/FlyerLevels/FrequesntFlyerTierGold.png",
       "Description": "Use app bars to present navigation, commands, and tools to users."
 
     },
     {
       "UniqueId": "Buttons",
-      "Title": "Buttons Dom",
+      "Title": "1B Joanne Jo",
       "Subtitle": "Button, HyperlinkButton, RepeatButton, ToggleButton",
-      "ImagePath": "ms-appx:///Assets/FlyerLevels/platinum-circle.png",
+      "ImagePath": "ms-appx:///Assets/FlyerLevels/FrequesntFlyerTierNoStatus.png",
       "Description": "Use button controls to let users perform an action, like submitting a form or showing a menu."
     },
     {
       "UniqueId": "Collections",
-      "Title": "Collection/data controls",
+      "Title": "1C Natashia Nemec",
       "Subtitle": "FlipView, GridView, ListView, Pivot, SemanticZoom, Hub",
-      "ImagePath": "ms-appx:///Assets/GridView.png",
+      "ImagePath": "ms-appx:///Assets/FlyerLevels/FrequesntFlyerTierPlatinum.png",
       "Description": "Use collection controls to display, navigate, and interact with collections of data and media."
     },
     {
       "UniqueId": "Flyouts",
-      "Title": "Flyout controls",
+      "Title": "1D Sofia Streett",
       "Subtitle": "ContentDialog, Flyout, MenuFlyout, ToolTip",
       "ImagePath": "ms-appx:///Assets/ToolTip.png",
       "Description": "Use flyout surfaces to show or collect contextual information."
     },
     {
       "UniqueId": "Layout",
-      "Title": "Layout controls",
+      "Title": "1E Murray Masden",
       "Subtitle": "Border, Canvas, Grid, RelativePanel, ScrollViewer, SplitView, StackPanel, VariableSizedWrapGrid, ViewBox",
       "ImagePath": "ms-appx:///Assets/Canvas.png",
       "Description": "Use layout controls to arrange the controls and content in your app."
     },
     {
       "UniqueId": "Progress",
-      "Title": "Progress controls",
+      "Title": "1F Charles Carrel",
       "Subtitle": "ProgressBar, ProgressRing",
       "ImagePath": "ms-appx:///Assets/ProgressBar.png",
       "Description": "Use progress controls to graphically represent ongoing activity or the progress of a task."

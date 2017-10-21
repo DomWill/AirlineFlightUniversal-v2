@@ -12,7 +12,7 @@
 
         <DataTemplate x:Key="ImageOverlayTemplate" x:DataType="data:ControlInfoDataGroup">
             <StackPanel Height="130" Width="190" Margin="4,4,4,8">
-                <TextBlock Text="{x:Bind Title}" Margin="8,4" HorizontalAlignment="Center" />
+                <TextBlock Text="{x:Bind Title}" Margin="8,4" HorizontalAlignment="Center"  />
                 <!--<Image Source="{x:Bind ImagePath}" Margin="8,0,8,8" Stretch="UniformToFill" />-->
 
                 <Ellipse x:Name="Ellipse" 
@@ -74,13 +74,19 @@
         <Image x:Name="FlightSeating" Grid.Column="1" Source="Assets/Images/VA_737-800_Business.jpg" />
 
         <Grid Grid.Column="3" >
-            <GridView x:Name="Control1" ItemsSource="{x:Bind Groups}"
+            <Pivot>
+                <PivotItem Header="Passengers">
+                    <GridView x:Name="Control1" ItemsSource="{x:Bind Groups}"
                           ItemTemplate="{StaticResource ImageOverlayTemplate}"
                           CanDragItems="False" 
                           IsItemClickEnabled="True" 
                           IsSwipeEnabled="False"
                           SelectionChanged="Control1_SelectionChanged" ItemClick="Control1_ItemClick" />
-            
+                </PivotItem>
+                <PivotItem Header="Crew">
+                </PivotItem>
+            </Pivot>
+
         </Grid>
        
 

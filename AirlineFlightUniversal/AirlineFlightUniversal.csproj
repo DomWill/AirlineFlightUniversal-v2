@@ -114,6 +114,9 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="AirlineFlightUniversal_TemporaryKey.pfx" />
+    <Content Include="Assets\FlyerLevels\FrequesntFlyerTierGold.png" />
+    <Content Include="Assets\FlyerLevels\FrequesntFlyerTierNoStatus.png" />
+    <Content Include="Assets\FlyerLevels\FrequesntFlyerTierPlatinum.png" />
     <Content Include="Assets\FlyerLevels\platinum-circle.png" />
     <None Include="Connected Services\FlightXML3\AirlineFlightUniversal.FlightXML3.AircraftTypeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
